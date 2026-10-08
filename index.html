@@ -41,7 +41,7 @@
             color: #b9bbbe;
             font-weight: 600;
         }
-        input, textarea, select {
+        input, textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #202225;
@@ -52,15 +52,7 @@
             font-family: inherit;
             font-size: 14px;
         }
-        select {
-            appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b9bbbe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-            background-repeat: no-repeat;
-            background-position: right 12px center;
-            background-size: 16px;
-            cursor: pointer;
-        }
-        input:focus, textarea:focus, select:focus {
+        input:focus, textarea:focus {
             outline: 1px solid #7289da;
         }
         button {
@@ -95,28 +87,16 @@
             <input type="text" id="discord-username" name="Discord Username" placeholder="e.g., Wumpus" required>
         </div>
 
-        <!-- ROBLOX USER ID FIELD -->
+        <!-- Roblox User ID Field -->
         <div class="input-group">
             <label for="roblox-id">Enter Your Roblox User ID / Name</label>
             <input type="text" id="roblox-id" name="Roblox User ID" placeholder="e.g., Builderman or 12345678" required>
         </div>
 
-        <!-- Dropdown menu kept from your previous request -->
-        <div class="input-group">
-            <label for="reason">Reason for Submission</label>
-            <select id="reason" name="Submission Reason" required>
-                <option value="" disabled selected>Choose a category...</option>
-                <option value="Claim Reward">Claim Reward</option>
-                <option value="Clan Application">Clan Application</option>
-                <option value="Ban Appeal">Ban Appeal</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-
         <!-- Additional Details -->
         <div class="input-group">
             <label for="message">Additional Message</label>
-            <textarea id="message" name="Message Details" rows="3" placeholder="Any extra information..."></textarea>
+            <textarea id="message" name="Message Details" rows="4" placeholder="Any extra information..."></textarea>
         </div>
 
         <button type="submit">Submit Details</button>
