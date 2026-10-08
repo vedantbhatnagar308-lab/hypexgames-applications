@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Submission Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2f3136;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .form-container {
+            background-color: #36393f;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 450px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #7289da;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #b9bbbe;
+            font-weight: 600;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #202225;
+            background-color: #202225;
+            color: #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b9bbbe' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            cursor: pointer;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: 1px solid #7289da;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #7289da;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #5b73c7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Roblox Portal</h2>
+    
+    <!-- REPLACE THE ACTION URL WITH YOUR FORMSPREE ENDPOINT -->
+    <form action="https://formspree.io" method="POST">
+        
+        <!-- Discord Username -->
+        <div class="input-group">
+            <label for="discord-username">Discord Username</label>
+            <input type="text" id="discord-username" name="Discord Username" placeholder="e.g., Wumpus" required>
+        </div>
+
+        <!-- ROBLOX USER ID FIELD -->
+        <div class="input-group">
+            <label for="roblox-id">Enter Your Roblox User ID / Name</label>
+            <input type="text" id="roblox-id" name="Roblox User ID" placeholder="e.g., Builderman or 12345678" required>
+        </div>
+
+        <!-- Dropdown menu kept from your previous request -->
+        <div class="input-group">
+            <label for="reason">Reason for Submission</label>
+            <select id="reason" name="Submission Reason" required>
+                <option value="" disabled selected>Choose a category...</option>
+                <option value="Claim Reward">Claim Reward</option>
+                <option value="Clan Application">Clan Application</option>
+                <option value="Ban Appeal">Ban Appeal</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <!-- Additional Details -->
+        <div class="input-group">
+            <label for="message">Additional Message</label>
+            <textarea id="message" name="Message Details" rows="3" placeholder="Any extra information..."></textarea>
+        </div>
+
+        <button type="submit">Submit Details</button>
+    </form>
+</div>
+
+</body>
+</html>
